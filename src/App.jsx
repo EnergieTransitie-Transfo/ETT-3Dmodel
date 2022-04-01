@@ -9,6 +9,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
 
 import TransfoModel from "./TransfoModel";
+import TransfoModelOptimized from "./TransfoModelOptimized";
 import HDR from "./models/adamsbridge.hdr?url";
 
 extend({ SSAOPass });
@@ -48,7 +49,8 @@ export default function App() {
                         position={[-10, -10, -10]}
                         color="#fdfbd3"
                     />
-                    <TransfoModel />
+                    {/* <TransfoModel /> */}
+                    <TransfoModelOptimized />
                     <Environment files={HDR} />
                     <Sky />
                 </Canvas>

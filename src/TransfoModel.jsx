@@ -19,7 +19,7 @@ export default function Model(props) {
                 e.stopPropagation();
                 if (selected)
                     selected.children.forEach((ch) =>
-                        ch.material.color.set(0x3e3e3e)
+                        ch.material.color.set(0xe7e7e7)
                     );
                 if (e.object.parent.buildingID !== 0) {
                     setSelected(e.object.parent);
