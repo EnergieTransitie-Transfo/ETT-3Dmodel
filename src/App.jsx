@@ -9,6 +9,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
 
 import TransfoModel from "./TransfoModel";
+import HDR from "./models/adamsbridge.hdr?url";
 
 extend({ SSAOPass });
 
@@ -28,9 +29,10 @@ export default function App() {
                         enableZoom={true}
                         enablePan={true}
                         zoomSpeed={1}
-                        minDistance={200}
+                        minDistance={250}
                         maxDistance={500}
-                        // autoRotate={true}
+                        autoRotate={true}
+                        autoRotateSpeed={0.7}
                     />
                     {/* <ambientLight intensity={0.25} /> */}
                     {/* <spotLight
@@ -47,7 +49,7 @@ export default function App() {
                         color="#fdfbd3"
                     />
                     <TransfoModel />
-                    <Environment files="/adamsbridge.hdr" />
+                    <Environment files={HDR} />
                     <Sky />
                 </Canvas>
             </div>

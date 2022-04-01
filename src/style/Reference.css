@@ -1,0 +1,15 @@
+.referenceBox {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    /* height: 20px; */
+    /* width: 70px; */
+    display: flex;
+}
+
+a {
+    padding: 2px 3px;
+    color: #6666f7;
+    text-decoration: none;
+}
