@@ -9,7 +9,9 @@ import TransfoGLTF from "./models/TransfoModelOptimized.gltf?url";
 export default function Model({ ...props }) {
     const group = useRef();
     const { nodes, materials } = useGLTF(TransfoGLTF);
-    const defaultColor = materials["Material.029"]?.color.getHex();
+    const [defaultColor, setDefaultColor] = useState(
+        materials["Material.029"]?.color.getHex()
+    );
     const [selected, setSelected] = useState(null);
     return (
         <group
@@ -17,6 +19,7 @@ export default function Model({ ...props }) {
             {...props}
             dispose={null}
             onClick={(e) => {
+                console.log(defaultColor);
                 e.stopPropagation();
                 if (selected) selected.material.color.set(defaultColor);
                 if (e.object.buildingID !== 0) {
