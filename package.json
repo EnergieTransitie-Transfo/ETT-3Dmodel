@@ -1,7 +1,7 @@
 {
   "name": "threejsreact-test",
   "private": true,
-  "homepage": "https://https://pvw-energieeducatie.github.io/PVWEE-3Dmodel/",
+  "homepage": "https://pvw-energieeducatie.github.io/PVWEE-3Dmodel/",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
