@@ -32,7 +32,7 @@ export default function App() {
                         zoomSpeed={1}
                         minDistance={250}
                         maxDistance={500}
-                        autoRotate={true}
+                        autoRotate={false}
                         autoRotateSpeed={0.7}
                     />
                     {/* <ambientLight intensity={0.25} /> */}

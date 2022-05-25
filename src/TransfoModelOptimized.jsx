@@ -24,15 +24,18 @@ export default function Model({ ...props }) {
                 if (selected) selected.material.color.set(defaultColor);
                 if (e.object.buildingID !== 0) {
                     setSelected(e.object);
-                    e.object.material.color.set("#02b802");
+                    e.object.material.color.set("#993a20");
+                    alert(`Building Name: ${e.object.name}`);
+
                 }
                 // console.log(e.object.parent);
-                // let id = e.object.parent.buildingID;
+                // let id = e.objects.parent.buildingID;
                 // alert(`You clicked on building ${id}`);
             }}
         >
             <group rotation={[-Math.PI / 2, 0, 0]} scale={0.03}>
                 <mesh
+                    buildingID={1}
                     geometry={nodes["101744"].geometry}
                     material={materials["Material.021"]}
                     position={[10460.71, -4694.3, -111.03]}
@@ -43,6 +46,8 @@ export default function Model({ ...props }) {
                         scale={[1.08, 1.63, 0.74]}
                     >
                         <mesh
+                            buildingID={22}
+                            name="Voorpost onderstation 70kV"
                             geometry={nodes["258602"].geometry}
                             material={materials["Material.022"]}
                             position={[1866.2, 984.25, 0]}
@@ -50,12 +55,15 @@ export default function Model({ ...props }) {
                         />
                     </group>
                     <group
+
                         position={[466.62, 2991.08, 0]}
                         rotation={[0, 0, -Math.PI / 3]}
                         scale={0.57}
                     >
                         <group position={[0, 188.4, 1834.49]}>
                             <mesh
+                                buildingID={21}
+                                name="molen"
                                 geometry={nodes["グループ#11001"].geometry}
                                 material={materials["Material.023"]}
                                 position={[1120.32, 0, 566.89]}
@@ -63,11 +71,13 @@ export default function Model({ ...props }) {
                             />
                         </group>
                         <mesh
+                            buildingID={21}
                             geometry={nodes["256802"].geometry}
                             material={nodes["256802"].material}
                             position={[1049.76, 278.95, 2295.28]}
                         />
                         <mesh
+                            buildingID={21}
                             geometry={nodes["256803"].geometry}
                             material={nodes["256803"].material}
                             position={[1065.51, 294.7, 2369.69]}
@@ -75,12 +85,16 @@ export default function Model({ ...props }) {
                     </group>
                 </mesh>
                 <mesh
+                    buildingID={19}
+                    name="Klimzaal"
                     geometry={nodes["101745"].geometry}
                     material={materials["Material.024"]}
                     position={[2278.77, -1521.02, 110.47]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={18}
+                    name="Watertoren & Werkhuis & Ventilatorengebouw & noordelijke schoorsteen"
                     geometry={nodes["271474"].geometry}
                     material={materials["Material.025"]}
                     position={[3395.44, 4213.2, -54.89]}
@@ -88,90 +102,119 @@ export default function Model({ ...props }) {
                     scale={[0.72, 0.72, 1]}
                 />
                 <mesh
+                    buildingID={17}
+                    name="Admin. Geb. & OpzichtersWoning & DirecteursWoning"
                     geometry={nodes["271529"].geometry}
                     material={materials["Material.026"]}
                     position={[1331.38, 600.04, -212.37]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={16}
+                    name="Duiktank & stookolietank2 & stookolietank3 & pompgebouw fuel & overslaggebouw & Opslagplaats kolen"
                     geometry={nodes["271530"].geometry}
                     material={materials["Material.027"]}
                     position={[603.41, 5844.91, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={15}   
+                    name="Voet v. oude koeltoren"
                     geometry={nodes["271533"].geometry}
                     material={materials["Material.028"]}
                     position={[2780.35, 746.84, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={14}
+                    name="Werkhuis elektriekers"
                     geometry={nodes["271542"].geometry}
                     material={materials["Material.029"]}
                     position={[2369.11, 1710.26, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={13}
+                    name="Brandweerarsenaal"
                     geometry={nodes["271543"].geometry}
                     material={materials["Material.030"]}
                     position={[2664.99, 289.71, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={12}
+                    name="Transformatorpost"
                     geometry={nodes["271544"].geometry}
                     material={materials["Material.031"]}
                     position={[3569.45, -2538.45, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={11}
+                    name="Tank t.h.v.h kanaal en jaagpad"
                     geometry={nodes["271545"].geometry}
                     material={materials["Material.032"]}
                     position={[7119.06, 223.29, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={10}
+                    name="Bunker"
                     geometry={nodes["271546"].geometry}
                     material={materials["Material.033"]}
                     position={[-6721.43, -1252.03, -54.89]}
                     rotation={[0, 0, 1.43]}
                 />
                 <mesh
+                    buildingID={9}
+                    name="Oude loods"
                     geometry={nodes["271547"].geometry}
                     material={materials["Material.034"]}
                     position={[-6272.21, -461.16, -54.89]}
                     rotation={[0, 0, 0.86]}
                 />
                 <mesh
+                    buildingID={8}
+                    name="Machinezaal & Ketelhuis & Oud Transfo & Nieuw Transfo & oude pompenzaal& Mecha Geb. & C. schoorst.& Res. Koel"
                     geometry={nodes["271549"].geometry}
                     material={materials["Material.035"]}
                     position={[4881.45, 867.51, -15.52]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={7}
+                    name="ConciërgeWoning"
                     geometry={nodes["271552"].geometry}
                     material={materials["Material.042"]}
                     position={[1045.85, 3324.84, -54.89]}
                     rotation={[0, 0, 0.7]}
                 />
                 <mesh
+                    buildingID={18}
                     geometry={nodes["271606"].geometry}
                     material={materials["Material.036"]}
                     position={[4732.88, 4600.71, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={5}
+                    name="Bezinkingsbekkens"
                     geometry={nodes["271608"].geometry}
                     material={materials["Material.037"]}
                     position={[-229.8, 1378.94, -54.89]}
                     rotation={[0, 0, -1.06]}
                 />
                 <mesh
+                    buildingID={4}
+                    name="Sociaal woonproject Eigen Haard (voormalige loods)"
                     geometry={nodes["271614"].geometry}
                     material={materials["Material.038"]}
                     position={[-5343.27, 893.36, -54.89]}
                     rotation={[0, 0, 2.08]}
                 />
                 <mesh
+                    buildingID={3}
+                    name="Residentiele woonproject (Mevaco)"
                     geometry={nodes["271615"].geometry}
                     material={materials["Material.039"]}
                     position={[678.55, 6528.9, -54.89]}
@@ -179,6 +222,7 @@ export default function Model({ ...props }) {
                 />
                 <mesh
                     buildingID={0}
+                    name="Floor"
                     geometry={nodes.Ground.geometry}
                     material={materials["Material.041"]}
                     position={[4881.34, 867.54, -54.89]}
@@ -189,330 +233,494 @@ export default function Model({ ...props }) {
                     rotation={[0, 0, 1.69]}
                 >
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001.geometry}
                         material={materials["mast3.094"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_1.geometry}
                         material={materials["mast3.095"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_2.geometry}
                         material={materials["mast3.096"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_3.geometry}
                         material={materials["mast3.097"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_4.geometry}
                         material={materials["mast3.098"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_5.geometry}
                         material={materials["mast3.099"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_6.geometry}
                         material={materials["mast3.100"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_7.geometry}
                         material={materials["mast11.048"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_8.geometry}
                         material={materials["mast11.049"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_9.geometry}
                         material={materials["mast3.101"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_10.geometry}
                         material={materials["mast3.102"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_11.geometry}
                         material={materials["mast3.103"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_12.geometry}
                         material={materials["mast3.104"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_13.geometry}
                         material={materials["PGEM 150kV verhoging.008"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_14.geometry}
                         material={materials["mast3.105"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_15.geometry}
                         material={materials["Concrete_Aggregate_Smoke.012"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_16.geometry}
                         material={materials["mast11.050"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_17.geometry}
                         material={materials["default_face_material3.002"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_18.geometry}
                         material={materials["mast11.051"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_19.geometry}
                         material={materials["mast11.052"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_20.geometry}
                         material={materials["Concrete_Aggregate_Smoke.013"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_21.geometry}
                         material={materials["mast3.106"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_22.geometry}
                         material={materials["mast11.053"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_23.geometry}
                         material={materials["mast3.107"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_24.geometry}
                         material={materials["mast3.108"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_25.geometry}
                         material={materials["mast11.054"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_26.geometry}
                         material={materials["mast3.109"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_27.geometry}
                         material={materials["mast11.055"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_28.geometry}
                         material={materials["mast3.110"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_29.geometry}
                         material={materials["mast3.111"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_30.geometry}
                         material={materials["mast11.056"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_31.geometry}
                         material={materials["mast3.112"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_32.geometry}
                         material={materials["mast3.113"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_33.geometry}
                         material={materials["mast3.114"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_34.geometry}
                         material={materials["mast3.115"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_35.geometry}
                         material={materials["mast3.116"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_36.geometry}
                         material={materials["mast3.117"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_37.geometry}
                         material={materials["mast11.057"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_38.geometry}
                         material={materials["PGEM 150kV verhoging.009"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_39.geometry}
                         material={materials["mast3.118"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_40.geometry}
                         material={materials["mast11.058"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_41.geometry}
                         material={materials["mast11.059"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_42.geometry}
                         material={materials["mast3.119"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_43.geometry}
                         material={materials["mast11.060"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_44.geometry}
                         material={materials["mast11.061"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_45.geometry}
                         material={materials["mast11.062"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_46.geometry}
                         material={materials["mast3.120"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_47.geometry}
                         material={materials["PGEM 150kV verhoging.010"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_48.geometry}
                         material={materials["mast3.121"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_49.geometry}
                         material={materials["mast11.063"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_50.geometry}
                         material={materials["mast3.122"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_51.geometry}
                         material={materials["mast3.123"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_52.geometry}
                         material={materials["mast3.124"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_53.geometry}
                         material={materials["mast3.125"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_54.geometry}
                         material={materials["mast3.126"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_55.geometry}
                         material={materials["Concrete_Aggregate_Smoke.014"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_56.geometry}
                         material={materials["mast3.127"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_57.geometry}
                         material={materials["mast11.064"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_58.geometry}
                         material={materials["mast3.128"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_59.geometry}
                         material={materials["Concrete_Aggregate_Smoke.015"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_60.geometry}
                         material={materials["mast11.065"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_61.geometry}
                         material={materials["PGEM 150kV verhoging.011"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_62.geometry}
                         material={materials["mast3.129"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_63.geometry}
                         material={materials["mast3.130"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_64.geometry}
                         material={materials["mast3.131"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_65.geometry}
                         material={materials["mast3.132"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_66.geometry}
                         material={materials["mast11.066"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_67.geometry}
                         material={materials["mast3.133"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_68.geometry}
                         material={materials["mast3.134"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_69.geometry}
                         material={materials["mast11.067"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_70.geometry}
                         material={materials["mast11.068"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_71.geometry}
                         material={materials["mast3.135"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_72.geometry}
                         material={materials["mast3.136"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_73.geometry}
                         material={materials["Concrete_Aggregate_Smoke.016"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_74.geometry}
                         material={materials["mast3.137"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_75.geometry}
                         material={materials["mast3.138"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_76.geometry}
                         material={materials["mast11.069"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_77.geometry}
                         material={materials["mast11.070"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_78.geometry}
                         material={materials["mast11.071"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_79.geometry}
                         material={materials["mast3.139"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_80.geometry}
                         material={materials["Concrete_Aggregate_Smoke.017"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_84001_81.geometry}
                         material={materials["mast3.140"]}
                     />
@@ -522,330 +730,494 @@ export default function Model({ ...props }) {
                     rotation={[0, 0, 0.6]}
                 >
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001.geometry}
                         material={materials["mast3.141"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_1.geometry}
                         material={materials["mast3.142"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_2.geometry}
                         material={materials["mast3.143"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_3.geometry}
                         material={materials["mast3.144"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_4.geometry}
                         material={materials["mast3.145"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_5.geometry}
                         material={materials["mast3.146"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_6.geometry}
                         material={materials["mast3.147"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_7.geometry}
                         material={materials["mast11.072"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_8.geometry}
                         material={materials["mast11.073"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_9.geometry}
                         material={materials["mast3.148"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_10.geometry}
                         material={materials["mast3.149"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_11.geometry}
                         material={materials["mast3.150"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_12.geometry}
                         material={materials["mast3.151"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_13.geometry}
                         material={materials["PGEM 150kV verhoging.012"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_14.geometry}
                         material={materials["mast3.152"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_15.geometry}
                         material={materials["Concrete_Aggregate_Smoke.018"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_16.geometry}
                         material={materials["mast11.074"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_17.geometry}
                         material={materials["default_face_material3.003"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_18.geometry}
                         material={materials["mast11.075"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_19.geometry}
                         material={materials["mast11.076"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_20.geometry}
                         material={materials["Concrete_Aggregate_Smoke.019"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_21.geometry}
                         material={materials["mast3.153"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_22.geometry}
                         material={materials["mast11.077"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_23.geometry}
                         material={materials["mast3.154"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_24.geometry}
                         material={materials["mast3.155"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_25.geometry}
                         material={materials["mast11.078"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_26.geometry}
                         material={materials["mast3.156"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_27.geometry}
                         material={materials["mast11.079"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_28.geometry}
                         material={materials["mast3.157"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_29.geometry}
                         material={materials["mast3.158"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_30.geometry}
                         material={materials["mast11.080"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_31.geometry}
                         material={materials["mast3.159"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_32.geometry}
                         material={materials["mast3.160"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_33.geometry}
                         material={materials["mast3.161"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_34.geometry}
                         material={materials["mast3.162"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_35.geometry}
                         material={materials["mast3.163"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_36.geometry}
                         material={materials["mast3.164"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_37.geometry}
                         material={materials["mast11.081"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_38.geometry}
                         material={materials["PGEM 150kV verhoging.013"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_39.geometry}
                         material={materials["mast3.165"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_40.geometry}
                         material={materials["mast11.082"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_41.geometry}
                         material={materials["mast11.083"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_42.geometry}
                         material={materials["mast3.166"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_43.geometry}
                         material={materials["mast11.084"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_44.geometry}
                         material={materials["mast11.085"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_45.geometry}
                         material={materials["mast11.086"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_46.geometry}
                         material={materials["mast3.167"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_47.geometry}
                         material={materials["PGEM 150kV verhoging.014"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_48.geometry}
                         material={materials["mast3.168"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_49.geometry}
                         material={materials["mast11.087"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_50.geometry}
                         material={materials["mast3.169"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_51.geometry}
                         material={materials["mast3.170"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_52.geometry}
                         material={materials["mast3.171"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_53.geometry}
                         material={materials["mast3.172"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_54.geometry}
                         material={materials["mast3.173"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_55.geometry}
                         material={materials["Concrete_Aggregate_Smoke.020"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_56.geometry}
                         material={materials["mast3.174"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_57.geometry}
                         material={materials["mast11.088"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_58.geometry}
                         material={materials["mast3.175"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_59.geometry}
                         material={materials["Concrete_Aggregate_Smoke.021"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_60.geometry}
                         material={materials["mast11.089"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_61.geometry}
                         material={materials["PGEM 150kV verhoging.015"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_62.geometry}
                         material={materials["mast3.176"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_63.geometry}
                         material={materials["mast3.177"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_64.geometry}
                         material={materials["mast3.178"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_65.geometry}
                         material={materials["mast3.179"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_66.geometry}
                         material={materials["mast11.090"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_67.geometry}
                         material={materials["mast3.180"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_68.geometry}
                         material={materials["mast3.181"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_69.geometry}
                         material={materials["mast11.091"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_70.geometry}
                         material={materials["mast11.092"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_71.geometry}
                         material={materials["mast3.182"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_72.geometry}
                         material={materials["mast3.183"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_73.geometry}
                         material={materials["Concrete_Aggregate_Smoke.022"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_74.geometry}
                         material={materials["mast3.184"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_75.geometry}
                         material={materials["mast3.185"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_76.geometry}
                         material={materials["mast11.093"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_77.geometry}
                         material={materials["mast11.094"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_78.geometry}
                         material={materials["mast11.095"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_79.geometry}
                         material={materials["mast3.186"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_80.geometry}
                         material={materials["Concrete_Aggregate_Smoke.023"]}
                     />
                     <mesh
+                        buildingID={2}
+                        name="HoogspanningsPylons"
                         geometry={nodes.Mesh_83001_81.geometry}
                         material={materials["mast3.187"]}
                     />
